@@ -1,5 +1,5 @@
 body{
-    background: #A7F3D0;
+    background: #FDE68A;
 }
 
 .App{
@@ -20,17 +20,25 @@ input{
     margin: 0.7rem;
     font-size: 1.3rem;
     border: none;
-    width:60%;
 }
 
-#addTodoBtn{
+.btn{
     padding: 0.5rem 1rem;
+    margin: 0.5rem;
     font-size: 1.3rem;
     border-radius: 0.5rem;
     border: none;
-    background: #FDE68A;
-    color: #78350F;
     font-family: 'Varela Round', sans-serif;
+}
+
+#addTodoBtn{
+    background: #A7F3D0;
+    color: #064E3B;
+}
+
+#clearTodoBtn{
+    background: #FCA5A5;
+    color: #7F1D1D;
 }
 
 

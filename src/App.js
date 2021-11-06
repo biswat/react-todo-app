@@ -22,28 +22,43 @@ export default function App(){
         });
       }
 
+
       //instead of keydown try wrapping the code in form
 
     return (
       <div className="App">
-        <h1>ToDO App</h1>
+        <h1>ToDo App</h1>
 
         <form onSubmit={addTodo}>
-            <input
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-            />
-            <button id="addTodoBtn" type="submit">Add ToDo</button>
+          <input value={task} onChange={(e) => setTask(e.target.value)} />
+          <button class="btn" id="addTodoBtn" type="submit">
+            Add ToDo
+          </button>
+          <button
+            class="btn"
+            id="clearTodoBtn"
+            onClick={() => window.location.reload(false)}
+          >
+            Clear List
+          </button>
         </form>
 
         <ul>
-
-            {todo.map((task) => {
-              return <li className="listStyle"> {task}
-               <button onClick={(e) => delTodo(e)} id="removeTodoBtn" value={task}>Remove</button> 
-               </li>;
-            })}
-
+          {todo.map((task) => {
+            return (
+              <li className="listStyle">
+                {" "}
+                {task}
+                <button
+                  onClick={(e) => delTodo(e)}
+                  id="removeTodoBtn"
+                  value={task}
+                >
+                  Remove
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     );
