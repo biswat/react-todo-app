@@ -15,10 +15,15 @@ export default function App(){
 
       function delTodo(event){
         var indexOfEvent = todo.indexOf(event.target.value);
-        todo.splice(indexOfEvent, 1);
+        var data = todo.splice(indexOfEvent, 1);
         // list.style.display = "none"
-        setTodo((oldTodo) => {
-          return [...oldTodo, todo];
+        var array = []
+        for(var i = 0; i < todo.length; i++) {
+            var value = [todo[i]]
+            array.push(value)
+          }
+        setTodo((oldTodo) => {  
+          return array;
         });
       }
 
